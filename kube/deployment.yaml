@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: demo-configserver
   name: demo-configserver
+  namespace: default
 spec:
   replicas: 1
   selector:
