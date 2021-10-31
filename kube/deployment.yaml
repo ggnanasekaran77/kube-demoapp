@@ -18,7 +18,7 @@ spec:
         app: demo-configserver
     spec:
       containers:
-      - image: ggnanasekaran77/configserver:80adab8259d3a7d674e20ea0667381441ad0f33d
+      - image: ggnanasekaran77/configserver:1d482047ea27fbb9242cc72753327b79005d9f5f
         name: configserver
         resources: {}
 status: {}
