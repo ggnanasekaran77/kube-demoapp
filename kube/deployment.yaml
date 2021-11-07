@@ -7,10 +7,10 @@ metadata:
   namespace: default
 spec:
   replicas: 2
+  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: demo-configserver
-  strategy: {}
   template:
     metadata:
       creationTimestamp: null
@@ -20,5 +20,5 @@ spec:
       containers:
       - image: ggnanasekaran77/configserver:e2748f1bfe54154c617805b89eff73268b5ba0df
         name: configserver
-        resources: {}
-status: {}
+        ports:
+        - containerPort: 8080
