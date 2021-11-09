@@ -18,7 +18,7 @@ spec:
         app: demo-configserver
     spec:
       containers:
-      - image: ggnanasekaran77/configserver:dcc99427a45e8da727baa4cda770ac3c941772c2
+      - image: ggnanasekaran77/configserver:dcc99427a45e8da727baa4cda770ac3c941772c3
         name: configserver
         ports:
         - containerPort: 8080
