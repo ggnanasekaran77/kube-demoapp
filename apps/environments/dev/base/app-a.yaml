@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-a
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/manifest-generate-paths: .  
+spec:
+  project: env-poc-apps
+  source:
+    repoURL: https://github.com/ggnanasekaran77/kube-demoapp.git
+    path: apps/environments/dev/app-a
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo-app
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+    retry:
+      limit: 5
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
