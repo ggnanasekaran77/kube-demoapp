@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/manifest-generate-paths: .  
 spec:
-  project: env-poc-apps
+  project: dev-demo
   source:
     repoURL: https://github.com/ggnanasekaran77/kube-demoapp.git
     path: apps/environments/dev/app-a
