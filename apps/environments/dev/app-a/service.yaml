@@ -5,9 +5,11 @@ metadata:
     app: demo-configserver
   name: demo-configserver
 spec:
+  type: NodePort
   ports:
   - port: 8080
     protocol: TCP
     targetPort: 8080
+    nodePort: 30090
   selector:
     app: demo-configserver
